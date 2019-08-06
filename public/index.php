@@ -6,6 +6,8 @@
 
     <link rel="stylesheet" href="css/style.css">
     <title>Front Blocks</title>
+
+    <script src="js/index-app.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -27,7 +29,20 @@
         <div class="yar-block">
             <div class="yar-block__content yar-bg-white">
                 <div class="yar-filters-panel">
-                    <div class="yar-filters-panel__filter">Filter</div>
+                    <div class="yar-filters-panel__filter ">
+                        <div class="yar-filters-panel__filter-title">Filter</div>
+                        <div class="yar-filters-panel__filter-list">
+                            <ul class="yar-filters-list">
+                                <li class="yar-filters-list__item">List item</li>
+                                <li class="yar-filters-list__item">List item</li>
+                                <li class="yar-filters-list__item">List item</li>
+                                <li class="yar-filters-list__item">List item</li>
+                                <li class="yar-filters-list__item">List item</li>
+                                <li class="yar-filters-list__item">List item</li>
+                                <li class="yar-filters-list__item">List item</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="yar-filters-panel__line"></div>
                     <div class="yar-filters-panel__filter">Filter</div>
                     <div class="yar-filters-panel__line"></div>

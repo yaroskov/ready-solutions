@@ -1,4 +1,5 @@
-@import "colors.css";
+@import "inc/colors.css";
+@import "inc/yar-filters-panel.css";
 
 * {
     margin: 0;
@@ -52,20 +53,6 @@ html {
     width: 800px;
     margin: 8px 0;
     padding: 6px 0;
-}
-
-.yar-filters-panel{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.yar-filters-panel__filter{
-    padding: 10px;
-}
-
-.yar-filters-panel__line{
-    border-left: 1px solid #636363;
-    height: 20px;
 }
 
 .yar-products{
