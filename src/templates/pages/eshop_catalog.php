@@ -11,16 +11,12 @@ $filters = $eShopCatalog->filters();
 
             <?php foreach ($filters as $filter): ?>
                 <div class="yar-filters-panel__filter ">
-                    <div class="yar-filters-panel__filter-title"><?php echo $filter; ?></div>
+                    <div class="yar-filters-panel__filter-title"><?php echo $filter['title']; ?></div>
                     <div class="yar-filters-panel__filter-list">
                         <ul class="yar-filters-list">
-                            <li class="yar-filters-list__item">List item</li>
-                            <li class="yar-filters-list__item">List item</li>
-                            <li class="yar-filters-list__item">List item</li>
-                            <li class="yar-filters-list__item">List item</li>
-                            <li class="yar-filters-list__item">List item</li>
-                            <li class="yar-filters-list__item">List item</li>
-                            <li class="yar-filters-list__item">List item</li>
+                            <?php foreach ($filter['data'] as $item): ?>
+                                <li class="yar-filters-list__item"><?php echo $item; ?></li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                 </div>
