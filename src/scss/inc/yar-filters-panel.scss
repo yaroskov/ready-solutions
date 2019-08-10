@@ -1,0 +1,36 @@
+.yar-filters-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__filter {
+        padding: 10px;
+        position: relative;
+    }
+
+    &__line {
+        border-left: 1px solid #636363;
+        height: 20px;
+    }
+
+    &__filter-title {
+
+    }
+
+    &__filter-list {
+        position: absolute;
+        background: white;
+        padding: 10px;
+        left: 0;
+        width: max-content;
+        box-shadow: 0 4px 4px #d0d0d0;
+    }
+}
+
+.yar-filters-list {
+    list-style-type: none;
+
+    &__item {
+        margin-top: 5px;
+    }
+}

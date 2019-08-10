@@ -1,6 +1,7 @@
 'use strict';
 
-import Test from './classes/Test.js';
+import '../scss/style.scss';
+import FiltersMenu from "./classes/FiltersMenu";
 
-let test = new Test();
-test.run();
+let filtersMenu = new FiltersMenu();
+filtersMenu.run();
