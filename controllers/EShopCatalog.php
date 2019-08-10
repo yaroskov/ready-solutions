@@ -31,10 +31,10 @@ class EShopCatalog
 
     public function products()
     {
-        $query = "SELECT `models`.`name` as `model`, `devices_types`.`name` as `device` FROM `models`" .
-            "INNER JOIN `products`" .
-            "ON `products`.`models_id` = `models`.`id`" .
-            "INNER JOIN `devices_types`" .
+        $query = "SELECT `models`.`name` as `model`, `devices_types`.`name` as `device` FROM `models` " .
+            "INNER JOIN `products` " .
+            "ON `products`.`models_id` = `models`.`id` " .
+            "INNER JOIN `devices_types` " .
             "ON `devices_types`.`id` = `products`.`devices_types_id`";
 
         if ($this->itemsOnPage) {
@@ -50,10 +50,10 @@ class EShopCatalog
 
     public function pagination($itemsOnPage, $currentPage = 1, $shownPages = 3)
     {
-        $query = "SELECT COUNT(*) as `sum` FROM `models`" .
-            "INNER JOIN `products`" .
-            "ON `products`.`models_id` = `models`.`id`" .
-            "INNER JOIN `devices_types`" .
+        $query = "SELECT COUNT(*) as `sum` FROM `models` " .
+            "INNER JOIN `products` " .
+            "ON `products`.`models_id` = `models`.`id` " .
+            "INNER JOIN `devices_types` " .
             "ON `devices_types`.`id` = `products`.`devices_types_id`";
 
         $results = DB::connect(DB['eShop'])->query($query);

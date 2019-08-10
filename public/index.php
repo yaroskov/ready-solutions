@@ -21,10 +21,10 @@
     </header>
 
     <div class="content yar-bg-light-gray">
-        <?php require_once dirname(__FILE__) . '/../src/templates/pages/eshop_catalog.php'; ?>
+        <?php require_once dirname(__FILE__) . '/../src/templates/pages/eshop_catalog/eshop_catalog.php'; ?>
     </div>
 
-    <footer class="footer yar-bg-gray-2">
+    <footer class="footer">
         <div class="yar-block">
             <div class="yar-block__content">
                 <div class="info-text">Info Text</div>
