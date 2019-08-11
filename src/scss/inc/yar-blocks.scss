@@ -15,9 +15,9 @@
   flex-wrap: wrap;
 
   &__product {
-    background: #ffffff;
+    background: white;
     margin: 10px 10px;
-    color: white;
+    //color: white;
     width: 175px;
     border-radius: 4px;
   }
@@ -30,6 +30,6 @@
 
   &__product-name {
     padding: 5px;
-    color: #4582dc;
+    color: $blue;
   }
 }

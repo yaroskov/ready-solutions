@@ -15,27 +15,13 @@ $products = $eShopCatalog->pagination(2, 1)->products();
 </div>
 
 <div class="yar-block yar-bg-white">
-    <div class="yar-block__content yar-clock__content_highlighted">
+    <div class="yar-block__content">
+
         <div class="yar-filters-panel">
-
-            <?php $end = end($filters); ?>
-            <?php foreach ($filters as $filter): ?>
-                <div class="yar-filters-panel__filter">
-                    <div class="yar-filters-panel__filter-title"><?php echo $filter['title']; ?></div>
-                    <div class="yar-filters-panel__filter-list" style="display: none;">
-                        <ul class="yar-filters-list">
-                            <?php foreach ($filter['data'] as $item): ?>
-                                <li class="yar-filters-list__item"><?php echo $item; ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                </div>
-
-                <?php if($filter != $end): ?>
-                    <div class="yar-filters-panel__line"></div>
-                <?php endif; ?>
-            <?php endforeach; ?>
+            <?php require_once dirname(__FILE__) . '/filters_panel.php'; ?>
+            <?php echo filtersPanel($filters); ?>
         </div>
+
     </div>
 </div>
 

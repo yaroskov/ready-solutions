@@ -1,4 +1,3 @@
-
 .yar-pagination {
     display: flex;
     justify-content: center;
@@ -6,10 +5,10 @@
     &__page {
         width: 30px;
         height: 30px;
-        border: 1px solid #4582dc;
+        border: 1px solid $blue;
         border-radius: 4px;
         background-color: white;
-        color: #4582dc;
+        color: $blue;
         margin: 5px;
         text-align: center;
         line-height: 30px;
@@ -20,13 +19,13 @@
         }
 
         &_selected {
-            background: #4582dc;
+            background: $blue;
             color: white;
         }
 
         &:hover {
-            border: 1px solid #4582dc;
-            background: #4582dc;
+            border: 1px solid $blue;
+            background: $blue;
             color: white;
         }
     }

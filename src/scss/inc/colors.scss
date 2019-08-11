@@ -1,23 +1,21 @@
-.yar-bg-yellow {
-    background-color: yellow;
-}
+$purple: #cb005c;
+$blue: #4582dc;
+$light-gray: #f5f5f5;
+$font-gray: #636363;
+$font-empty-gray: #d6d6d6;
 
 .yar-bg-purple {
-    background-color: #cb005c;
+    background-color: $purple;
 }
 
 .yar-bg-light-gray {
-    background-color: #f5f5f5;
+    background-color: $light-gray;
 }
 
 .yar-bg-white {
     background-color: white;
 }
 
-.yar-bg-gray-2{
-    background-color: #c1c1c1;
-}
-
 .yar-bg-blue {
-    background-color: #4582dc;
+    background-color: $blue;
 }

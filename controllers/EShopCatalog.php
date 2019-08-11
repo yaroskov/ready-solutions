@@ -5,26 +5,53 @@ require_once dirname(__FILE__) . '/../connections.php';
 
 class EShopCatalog
 {
-    public $filters = [];
+    public $filters = [
+        'devices' => ['title' => 'Device', 'selected' => ['name' => '', 'id' => '']],
+        'models' => ['title' => 'Model', 'selected' => ['name' => '', 'id' => '']],
+        'colors' => ['title' => 'Color', 'selected' => ['name' => '', 'id' => '']],
+        ];
 
     public $startPage, $endPage, $pagesTotal, $currentPage, $itemsOnPage;
 
-    public function singleFilter($key, $title, $query)
+    public function singleFilter($key, $query)
     {
         $results = DB::connect(DB['eShop'])->query($query);
 
-        $this->filters[$key]['title'] = $title;
-
-        foreach ($results as $result) {
-            $this->filters[$key]['data'][] = $result['name'];
+        foreach ($results as $i => $result) {
+            $this->filters[$key]['data'][$i]['name'] = $result['name'];
+            $this->filters[$key]['data'][$i]['id'] = $result['id'];
         }
+    }
+
+    public function addFilterSections() {
+
     }
 
     public function filters()
     {
-        $this->singleFilter('devices', 'Device', 'SELECT * FROM `devices_types`');
-        $this->singleFilter('models', 'Model', 'SELECT * FROM `models`');
-        $this->singleFilter('colors', 'Color', 'SELECT * FROM `colors`');
+        $this->singleFilter('devices', 'SELECT * FROM `devices_types`');
+
+        if (isset($_GET['data'])) {
+
+            $data = $_GET['data'];
+
+            foreach ($this->filters as $key => $filter) {
+
+                if (isset($data[$key])) {
+                    $this->filters[$key]['selected'] = $data[$key];
+                }
+            }
+
+            if ($data['devices']['id']) {
+
+                $this->singleFilter('models', 'SELECT * FROM `models` WHERE `devices_types_id` = ' . $data['devices']['id']);
+
+                if ($data['models']['id']) {
+
+                    $this->singleFilter('colors', 'SELECT * FROM `colors`');
+                }
+            }
+        }
 
         return $this->filters;
     }

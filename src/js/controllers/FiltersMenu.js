@@ -16,7 +16,7 @@ export default class FiltersMenu {
     }
 
     dropDown() {
-        $('.yar-filters-panel__filter-title').on('click', function () {
+        $('.yar-filters-panel').on('click', '.yar-filters-panel__filter-title', function () {
 
             let list = $(this).parent().find('.yar-filters-panel__filter-list');
 
