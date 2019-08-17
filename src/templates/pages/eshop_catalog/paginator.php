@@ -4,12 +4,12 @@
             <div class="yar-block__content yar-clock__content_highlighted">
                 <div class="yar-pagination">
 
-                    <?php if($eShopCatalog->startPage > 1): ?>
+                    <?php if($eShopCatalog->pagination->startPage > 1): ?>
                         <div class="yar-pagination__page yar-pagination__page_closing" data-page="1">1</div>
                     <?php endif; ?>
 
-                    <?php for($i = $eShopCatalog->startPage; $i <= $eShopCatalog->endPage; $i++): ?>
-                        <?php if($i == $eShopCatalog->currentPage): ?>
+                    <?php for($i = $eShopCatalog->pagination->startPage; $i <= $eShopCatalog->pagination->endPage; $i++): ?>
+                        <?php if($i == $eShopCatalog->pagination->currentPage): ?>
                             <div class="yar-pagination__page yar-pagination__page_selected" data-page="<?php echo $i; ?>">
                                 <?php echo $i; ?>
                             </div>
@@ -20,9 +20,9 @@
                         <?php endif; ?>
                     <?php endfor; ?>
 
-                    <?php if($eShopCatalog->endPage < $eShopCatalog->pagesTotal): ?>
-                        <div class="yar-pagination__page yar-pagination__page_closing" data-page="<?php echo $eShopCatalog->pagesTotal; ?>">
-                            <?php echo $eShopCatalog->pagesTotal; ?>
+                    <?php if($eShopCatalog->pagination->endPage < $eShopCatalog->pagination->pagesTotal): ?>
+                        <div class="yar-pagination__page yar-pagination__page_closing" data-page="<?php echo $eShopCatalog->pagination->pagesTotal; ?>">
+                            <?php echo $eShopCatalog->pagination->pagesTotal; ?>
                         </div>
                     <?php endif; ?>
 

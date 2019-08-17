@@ -1,6 +1,8 @@
 <?php
 
-require_once dirname(__FILE__) . '/../../controllers/EShopCatalog.php';
+//require_once dirname(__FILE__) . '/../../controllers/EShop/EShopCatalog.php';
+
+require_once dirname(__FILE__) . '/../../autoloader.php';
 
 $eShopCatalog = new EShopCatalog();
 

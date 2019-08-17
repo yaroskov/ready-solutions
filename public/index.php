@@ -1,3 +1,5 @@
+<?php include dirname(__FILE__) . '/../autoloader.php'; ?>
+
 <!doctype html>
 <html lang="en">
 <head>

@@ -1,6 +1,7 @@
 <?php
 
-require_once dirname(__FILE__) . '/DBBuilder.php';
+//require_once dirname(__FILE__) . '/DBBuilder.php';
+require_once dirname(__FILE__) . '/../../autoloader.php';
 
 class DB {
 

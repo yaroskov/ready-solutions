@@ -1,11 +1,10 @@
 <?php
-require_once dirname(__FILE__) . '/../../../../controllers/EShopCatalog.php';
+//require_once dirname(__FILE__) . '/../../../../controllers/EShop/EShopCatalog.php';
 
 $eShopCatalog = new EShopCatalog();
 $filters = $eShopCatalog->filters();
 
 $products = $eShopCatalog->pagination(2, 1)->products();
-
 ?>
 
 <div class="yar-block">
