@@ -2,7 +2,32 @@
 
 class Pagination
 {
-    public $startPage, $endPage, $pagesTotal, $currentPage, $itemsOnPage;
+    protected $startPage, $endPage, $pagesTotal, $currentPage, $itemsOnPage;
+
+    public function getStartPage()
+    {
+        return $this->startPage;
+    }
+
+    public function getEndPage()
+    {
+        return $this->endPage;
+    }
+
+    public function getCurrentPage()
+    {
+        return $this->currentPage;
+    }
+
+    public function getPagesTotal()
+    {
+        return $this->pagesTotal;
+    }
+
+    public function getItemsOnPage()
+    {
+        return $this->itemsOnPage;
+    }
 
     public function run($itemsOnPage, $allItemsNumber, $currentPage = 1, $shownPages = 3)
     {

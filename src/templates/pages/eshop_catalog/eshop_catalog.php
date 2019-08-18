@@ -3,7 +3,7 @@
 $eShopCatalog = new EShopCatalog();
 $filters = $eShopCatalog->filters();
 
-$products = $eShopCatalog->pagination(2, 1)->products();
+$products = $eShopCatalog->pagination(4, 1)->products();
 ?>
 
 <div class="yar-block">

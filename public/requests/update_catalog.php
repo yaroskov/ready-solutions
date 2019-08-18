@@ -6,7 +6,7 @@ require_once dirname(__FILE__) . '/../../autoloader.php';
 
 $eShopCatalog = new EShopCatalog();
 
-$products = $eShopCatalog->pagination(2, $_GET['page'])->products();
+$products = $eShopCatalog->pagination(4, $_GET['page'])->products();
 
 $results = [];
 

@@ -22,10 +22,10 @@ class EShopCatalog extends PaginationExecutor
             "INNER JOIN `devices_types` " .
             "ON `devices_types`.`id` = `products`.`devices_types_id`";
 
-        if ($this->pagination->itemsOnPage) {
+        if ($this->pagination->getItemsOnPage()) {
 
-            $offset = $this->pagination->itemsOnPage * ($this->pagination->currentPage - 1);
-            $query = $query . " LIMIT " . $this->pagination->itemsOnPage . " OFFSET " . $offset;
+            $offset = $this->pagination->getItemsOnPage() * ($this->pagination->getCurrentPage() - 1);
+            $query = $query . " LIMIT " . $this->pagination->getItemsOnPage() . " OFFSET " . $offset;
         }
 
         $results = DB::connect(DB['eShop'])->query($query);
