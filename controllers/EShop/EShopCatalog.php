@@ -2,10 +2,8 @@
 
 require_once dirname(__FILE__) . '/../../autoloader.php';
 
-class EShopCatalog
+class EShopCatalog extends PaginationExecutor
 {
-    public $itemsOnPage, $currentPage, $pagination;
-
     public function __construct()
     {
     }
@@ -24,10 +22,10 @@ class EShopCatalog
             "INNER JOIN `devices_types` " .
             "ON `devices_types`.`id` = `products`.`devices_types_id`";
 
-        if ($this->itemsOnPage) {
+        if ($this->pagination->itemsOnPage) {
 
-            $offset = $this->itemsOnPage * ($this->currentPage - 1);
-            $query = $query . " LIMIT " . $this->itemsOnPage . " OFFSET " . $offset;
+            $offset = $this->pagination->itemsOnPage * ($this->pagination->currentPage - 1);
+            $query = $query . " LIMIT " . $this->pagination->itemsOnPage . " OFFSET " . $offset;
         }
 
         $results = DB::connect(DB['eShop'])->query($query);
@@ -35,28 +33,9 @@ class EShopCatalog
         return $results;
     }
 
-    public function itemsNumber()
+    public function paginType($itemsOnPage, $currentPage = 1)
     {
-        $query = "SELECT COUNT(*) as `sum` FROM `models` " .
-            "INNER JOIN `products` " .
-            "ON `products`.`models_id` = `models`.`id` " .
-            "INNER JOIN `devices_types` " .
-            "ON `devices_types`.`id` = `products`.`devices_types_id`";
-
-        $results = DB::connect(DB['eShop'])->query($query);
-
-        return $results[0]['sum'];
-    }
-
-    public function pagination($itemsOnPage, $currentPage = 1)
-    {
-        $this->itemsOnPage = $itemsOnPage;
-        $this->currentPage = $currentPage;
-
-        $itemTotal = $this->itemsNumber();
-        $this->pagination = new Pagination();
-        $this->pagination->run($itemsOnPage, $itemTotal, $currentPage);
-
-        return $this;
+        $pagination = new PaginationRealisation();
+        return $pagination->pagination($itemsOnPage, $currentPage);
     }
 }

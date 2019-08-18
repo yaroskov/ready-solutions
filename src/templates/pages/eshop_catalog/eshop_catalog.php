@@ -1,5 +1,4 @@
 <?php
-//require_once dirname(__FILE__) . '/../../../../controllers/EShop/EShopCatalog.php';
 
 $eShopCatalog = new EShopCatalog();
 $filters = $eShopCatalog->filters();
