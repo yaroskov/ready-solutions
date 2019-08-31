@@ -1,4 +1,9 @@
 <?php
+namespace Controllers\EShop\Organs;
+
+use Controllers\DB\DB;
+use Controllers\Pagination\Pagination;
+use Controllers\Pagination\paginationRealize;
 
 class PaginationRealisation implements paginationRealize
 {

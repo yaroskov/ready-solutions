@@ -1,0 +1,21 @@
+{
+    "name": "yaroskov/ready-solutions",
+    "type": "project",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Yaroslav Kovalev",
+            "email": "yaroskov@yandex.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Controllers\\": "controllers/"
+        },
+        "files": [
+            "connections.php"
+        ]
+    }
+}

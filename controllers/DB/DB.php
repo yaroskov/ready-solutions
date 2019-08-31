@@ -1,6 +1,5 @@
 <?php
-
-require_once dirname(__FILE__) . '/../../autoloader.php';
+namespace Controllers\DB;
 
 class DB {
 

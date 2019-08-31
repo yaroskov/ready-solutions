@@ -1,4 +1,9 @@
 <?php
+namespace Controllers\EShop\Organs\Filters;
+
+use Controllers\EShop\Organs\Filters\Specific\Devices;
+use Controllers\EShop\Organs\Filters\Specific\Models;
+use Controllers\EShop\Organs\Filters\Specific\Colors;
 
 class FiltersGetter
 {

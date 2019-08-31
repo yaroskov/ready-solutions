@@ -1,5 +1,4 @@
 <?php
-
 require_once dirname(__FILE__) . '/connections.php';
 
 spl_autoload_register(function ($class_name) {

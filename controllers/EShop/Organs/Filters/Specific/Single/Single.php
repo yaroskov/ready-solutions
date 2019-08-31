@@ -1,4 +1,7 @@
 <?php
+namespace Controllers\EShop\Organs\Filters\Specific\Single;
+
+use Controllers\DB\DB;
 
 abstract class Single
 {

@@ -1,4 +1,5 @@
 <?php
+use Controllers\EShop\EShopCatalog;
 
 $eShopCatalog = new EShopCatalog();
 $filters = $eShopCatalog->filters();

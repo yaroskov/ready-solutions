@@ -1,4 +1,5 @@
 <?php
+namespace Controllers\EShop\Organs\Filters;
 
 class Filters
 {

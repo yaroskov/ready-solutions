@@ -1,6 +1,10 @@
 <?php
+namespace Controllers\EShop;
 
-require_once dirname(__FILE__) . '/../../autoloader.php';
+use Controllers\DB\DB;
+use Controllers\Pagination\PaginationExecutor;
+use Controllers\EShop\Organs\Filters\Filters;
+use Controllers\EShop\Organs\PaginationRealisation;
 
 class EShopCatalog extends PaginationExecutor
 {

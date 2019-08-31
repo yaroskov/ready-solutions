@@ -1,8 +1,7 @@
 <?php
+use Controllers\EShop\EShopCatalog;
 
-//require_once dirname(__FILE__) . '/../../controllers/EShop/EShopCatalog.php';
-
-require_once dirname(__FILE__) . '/../../autoloader.php';
+require_once dirname(__FILE__) . '/../../vendor/autoload.php';
 
 $eShopCatalog = new EShopCatalog();
 
